@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS RPG_Forum_django;
+CREATE DATABASE RPG_Forum_django;
