@@ -18,6 +18,9 @@ Technologies Used:
 
 
 [ERD](https://i.imgur.com/2Yzomau.png)
+V1: Generating User with many Characters and Worlds
+V2: Generating Comments on Characters and Worlds, Adding many to many relationships between Characters and Worlds
+V3: Generating Maps and Stories into Worlds
 
 
 Catalog of routes expected by the API:
