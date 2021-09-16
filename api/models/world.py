@@ -5,11 +5,12 @@ from django.contrib.auth import get_user_model
 class World(models.Model):
   # define fields
   # https://docs.djangoproject.com/en/3.0/ref/models/fields/
-  name = models.CharField(max_length=100)
   owner = models.ForeignKey(
       get_user_model(),
       on_delete=models.CASCADE
   )
+  game = models.CharField(max_length=500)
+  name = models.CharField(max_length=100)
   active = models.BooleanField()
   setting_type = models.CharField(max_length=100)
   description = models.TextField()
@@ -23,6 +24,7 @@ class World(models.Model):
     """Returns dictionary version of World models"""
     return {
         'id': self.id,
+        'game': self.game,
         'name': self.name,
         'active': self.active,
         'setting_type': self.setting_type,

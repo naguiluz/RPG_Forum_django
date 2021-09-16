@@ -8,7 +8,7 @@ from .models.character import Character
 class WorldSerializer(serializers.ModelSerializer):
     class Meta:
         model = World
-        fields = ('id', 'name', 'owner', 'active', 'setting_type', 'description')
+        fields = ('id', 'owner', 'game', 'name',  'active', 'setting_type', 'description')
 
 class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
