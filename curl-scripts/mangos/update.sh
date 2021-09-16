@@ -1,15 +1,16 @@
 #!/bin/bash
 
-curl "http://localhost:8000/mangos/${ID}/" \
+curl "http://localhost:8000/worlds/${ID}/" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
   --header "Authorization: Token ${TOKEN}" \
   --data '{
-    "mango": {
+    "world": {
       "name": "'"${NAME}"'",
-      "color": "'"${COLOR}"'",
-      "ripe": "'"${RIPE}"'"
+      "active": "'"${ACTIVE}"'",
+      "setting_type": "'"${TYPE}"'",
+      "description": "'"${DESCRIPTION}"'"
     }
   }'
 
