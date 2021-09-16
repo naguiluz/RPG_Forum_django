@@ -7,7 +7,7 @@ from .models.user import User
 class WorldSerializer(serializers.ModelSerializer):
     class Meta:
         model = World
-        fields = ('id', 'name', 'active', 'setting_type', 'description', 'owner')
+        fields = ('id', 'name', 'owner', 'active', 'setting_type', 'description')
 
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation

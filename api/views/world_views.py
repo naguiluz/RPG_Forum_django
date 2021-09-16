@@ -27,6 +27,7 @@ class Worlds(generics.ListCreateAPIView):
         request.data['world']['owner'] = request.user.id
         # Serialize/create world
         world = WorldSerializer(data=request.data['world'])
+        print(world)
         # If the world data is valid according to our serializer...
         if world.is_valid():
             # Save the created world & send a response
