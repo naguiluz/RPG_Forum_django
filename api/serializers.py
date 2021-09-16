@@ -3,11 +3,17 @@ from rest_framework import serializers
 
 from .models.world import World
 from .models.user import User
+from .models.character import Character
 
 class WorldSerializer(serializers.ModelSerializer):
     class Meta:
         model = World
         fields = ('id', 'name', 'owner', 'active', 'setting_type', 'description')
+
+class CharacterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Character
+        fields = ('id', 'owner', 'game', 'name', 'level', 'race', 'character_class', 'background', 'description', 'abilities', 'weapons_and_items', 'backstory')
 
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation
