@@ -13,7 +13,7 @@ class WorldSerializer(serializers.ModelSerializer):
 class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
-        fields = ('id', 'owner', 'game', 'name', 'level', 'race', 'character_class', 'background', 'description', 'abilities', 'weapons_and_items', 'backstory')
+        fields = ('id', 'owner', 'game', 'name', 'level', 'race', 'discipline', 'background', 'description', 'abilities', 'items', 'backstory')
 
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation
