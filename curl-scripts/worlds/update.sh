@@ -8,8 +8,7 @@ curl "http://localhost:8000/worlds/${ID}/" \
   --data '{
     "world": {
       "name": "'"${NAME}"'",
-      "active": "'"${ACTIVE}"'",
-      "setting_type": "'"${TYPE}"'",
+      "setting": "'"${TYPE}"'",
       "description": "'"${DESCRIPTION}"'"
     }
   }'

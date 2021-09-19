@@ -8,12 +8,12 @@ from .models.character import Character
 class WorldSerializer(serializers.ModelSerializer):
     class Meta:
         model = World
-        fields = ('id', 'owner', 'game', 'name',  'active', 'setting_type', 'description')
+        fields = ('id', 'owner', 'game', 'name', 'setting', 'description')
 
 class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
-        fields = ('id', 'owner', 'game', 'name', 'level', 'race', 'character_class', 'background', 'description', 'abilities', 'weapons_and_items', 'backstory')
+        fields = ('id', 'owner', 'game', 'name', 'level', 'race', 'discipline', 'background', 'description', 'abilities', 'items', 'backstory')
 
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation
