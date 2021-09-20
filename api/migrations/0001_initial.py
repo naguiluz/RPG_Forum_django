@@ -32,12 +32,13 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Mango',
+            name='World',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
-                ('ripe', models.BooleanField()),
-                ('color', models.CharField(max_length=100)),
+                ('active', models.BooleanField()),
+                ('setting', models.CharField(max_length=100)),
+                ('description', models.TextField()),
                 ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

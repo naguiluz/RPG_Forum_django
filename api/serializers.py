@@ -1,13 +1,19 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 
-from .models.mango import Mango
+from .models.world import World
 from .models.user import User
+from .models.character import Character
 
-class MangoSerializer(serializers.ModelSerializer):
+class WorldSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Mango
-        fields = ('id', 'name', 'color', 'ripe', 'owner')
+        model = World
+        fields = ('id', 'owner', 'game', 'name', 'setting', 'description')
+
+class CharacterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Character
+        fields = ('id', 'owner', 'game', 'name', 'level', 'race', 'discipline', 'background', 'description', 'abilities', 'items', 'backstory')
 
 class UserSerializer(serializers.ModelSerializer):
     # This model serializer will be used for User creation
